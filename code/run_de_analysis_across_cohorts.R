@@ -51,7 +51,7 @@ gene_info <- petri_1@featureData@data
 petri_1_gene <- gene_info$`Gene symbol`
 sample_info <- petri_1@phenoData@data
 treat <- sample_info$`disease:ch1`
-treat <- gsub("SLE (Systemic LUPUS Erythomatosus)", "SLE", treat, fixed = T)
+treat <- gsub("SLE (Systemic LUPUS Erythematosus)", "SLE", treat, fixed = T)
 treat <- gsub("Control", "CTRL", treat, fixed = T)
 petri_1_treat <- treat
 petri_1_expr <- reduce_probes(petri_1_expr, petri_1_gene)
